@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "HOME": "Home"
+  },
+  "LEARN": {
+    "LEARN": "Learn"
+  },
+  "CONTACT": {
+    "CONTACT": "Contact",
+    "FOLLOW_US_TW": "Follow us on Twitter"
+  },
+  "SETTINGS": {
+    "TITLE": "Settings",
+    "SELECT_LANGUAGE": "Select Language",
+    "LANGUAGES": "Languages",
+    "CANCEL": "Cancel",
+    "MYCOM": "{{ myCom }}",
+    "MYAPP": "{{ myApp }}",
+    "HI": "Hi {{ name }}"
+  },
+  "TABS": {
+    "TABS": "Tabs",
+    "HOME": "Home",
+    "LEARN": "Learn",
+    "CONTACT": "Contact"
+  },
+  "TESTING": {
+    "TESTING": "Testing"
+  },
+  "THEMES": {
+    "THEMES": "Themes"
+  },
+  "MENU": {
+    "MENU": "Menu"
+  }
+}

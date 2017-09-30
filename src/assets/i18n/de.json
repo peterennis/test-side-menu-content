@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "HOME": "DE Home"
+  },
+  "LEARN": {
+    "LEARN": "DE Learn"
+  },
+  "CONTACT": {
+    "CONTACT": "Kontakt",
+    "FOLLOW_US_TW": "DE Follow us on Twitter"
+  },
+  "SETTINGS": {
+    "TITLE": "DE Settings",
+    "SELECT_LANGUAGE": "Wähle deine Sprache",
+    "LANGUAGES": "Sprachen",
+    "CANCEL": "DE Cancel",
+    "MYCOM": "DE {{ myCom }}",
+    "MYAPP": "DE {{ myApp }}",
+    "HI": "Hi {{ name }}"
+  },
+  "TABS": {
+    "TABS": "DE Tabs",
+    "HOME": "DE Home",
+    "LEARN": "DE Learn",
+    "CONTACT": "Kontakt"
+  },
+  "TESTING": {
+    "TESTING": "DE Testing"
+  },
+  "THEMES": {
+    "THEMES": "DE Themes"
+  },
+  "MENU": {
+    "MENU": "DE Menu"
+  }
+}

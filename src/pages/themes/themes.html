@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'THEMES.THEMES' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h3>Setting Theme</h3>
+  <button class="pop-in" ion-button (click)="changeTheme('')">Default</button>
+  <button class="pop-in" ion-button color="dark" (click)="changeTheme('theme-dark')">Dark</button>
+  <button class="pop-in" ion-button color="light" (click)="changeTheme('theme-light')">Light</button>
+  
+</ion-content>

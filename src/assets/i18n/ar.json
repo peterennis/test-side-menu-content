@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "HOME": "استهلال"
+  },
+  "LEARN": {
+    "LEARN": "AR Learn"
+  },
+  "CONTACT": {
+    "CONTACT": "اتصال",
+    "FOLLOW_US_TW": "تابعونا على تويتر"
+  },
+  "SETTINGS": {
+    "TITLE": "AR Settings",
+    "SELECT_LANGUAGE": "اختر لغتك",
+    "LANGUAGES": "اللغات",
+    "CANCEL": "إلغاء",
+    "MYCOM": "AR {{ myCom }}",
+    "MYAPP": "AR {{ myApp }}",
+    "HI": "مرحبا {{ name }}"
+  },
+  "TABS": {
+    "TABS": "AR Tabs",
+    "HOME": "استهلال",
+    "LEARN": "AR Learn",
+    "CONTACT": "اتصال"
+  },
+  "TESTING": {
+    "TESTING": "AR Testing"
+  },
+  "THEMES": {
+    "THEMES": "AR Themes"
+  },
+  "MENU": {
+    "MENU": "AR Menu"
+  }
+}
