@@ -2,7 +2,7 @@
 // Global variables                     //
 // ------------------------------------ //
 $item-color-bg: #ccc;
-$header-color-bg: $background-option-menu;
+$header-color-bg: #eee;
 $animation-duration: 0.3s;
 
 // ------------------------------------ //
@@ -24,7 +24,7 @@ ion-item.item-wp {
     min-height: 50px;
 
     &.active-side-menu-option {
-       color: map-get($colors, aeyellow);
+       color: map-get($colors, primary);
     }
 
     &.item.item-block {

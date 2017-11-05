@@ -1,29 +1,34 @@
-import { SideMenuSettings } from './../shared/side-menu-content/side-menu-content.component';
-
+// Angular
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, MenuController, AlertController } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';   
-import { SplashScreen } from '@ionic-native/splash-screen';   
 
+// Ionic
+import { Nav, Platform, MenuController, AlertController } from 'ionic-angular';
+
+// Ionic Native
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+// Pages
 import { HomePage } from '../pages/home/home';
 import { DetailsPage } from '../pages/details/details';
 import { SassyPage } from '../pages/sassy/sassy';
 
+// Side Menu Component
+import { SideMenuContentComponent } from './../shared/side-menu-content/side-menu-content.component';
+import { SideMenuSettings } from './../shared/side-menu-content/models/side-menu-settings';
+import { MenuOptionModel } from './../shared/side-menu-content/models/menu-option-model';
+
 import { AppState } from './app.global';
 import { TranslateService } from '@ngx-translate/core';
-
-// Models
-import { MenuOptionModel, SideMenuContentComponent } from '../shared/side-menu-content/side-menu-content.component';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  @ViewChild(Nav) navCtrl: Nav;
 
-	@ViewChild(Nav) nav: Nav;
-
- 	// Get the instance to call the public methods
-	@ViewChild(SideMenuContentComponent) sideMenu: SideMenuContentComponent;
+  // Get the instance to call the public methods
+  @ViewChild(SideMenuContentComponent) sideMenu: SideMenuContentComponent;
 
   public rootPage: any = HomePage;
   //rootPage = TabsPage;
@@ -34,13 +39,13 @@ export class MyApp {
   state: any;
 
   // Options to show in the SideMenuComponent
-	public options: Array<MenuOptionModel>;
+  public options: Array<MenuOptionModel>;
   
   // Settings for the SideMenuComponent
   public sideMenuSettings: SideMenuSettings = {
     accordionMode: true,
     showSelectedOption: true,
-    selectedOptionClass: 'my-selected-option',
+    selectedOptionClass: 'active-side-menu-option',
     subOptionIndentation: {
       md: '56px',
       ios: '64px',
@@ -48,16 +53,16 @@ export class MyApp {
     }
   };
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
-    private alertCtrl: AlertController,
-    private menuCtrl: MenuController,
-    public translate: TranslateService,
-    public global: AppState) {
-    
-    this.initializeApp();
-
-  }
-
+  constructor(private platform: Platform,
+        	  private statusBar: StatusBar,
+			  private splashScreen: SplashScreen,
+			  private alertCtrl: AlertController,
+			  private menuCtrl: MenuController,
+			  public translate: TranslateService,
+			  public global: AppState) {
+		this.initializeApp();
+	}
+	
   initializeApp() {
     this.platform.ready().then(() => {
       this.global.set('theme', '');
@@ -73,8 +78,8 @@ export class MyApp {
       console.log(userLang)
       this.translate.use(userLang);
 
-	// Initialize some options
-			this.initializeOptions();
+	  // Initialize some options
+	  this.initializeOptions();
     });
   }
 
@@ -84,7 +89,7 @@ export class MyApp {
 		// Load simple menu options
 		// ------------------------------------------
 		this.options.push({
-      iconName: 'home',
+			iconName: 'home',
 			displayName: 'Home',
 			component: HomePage,
 			
@@ -189,7 +194,7 @@ export class MyApp {
 				window.open(url, '_blank');
 			} else {
 				// Redirect to the selected page
-				this.nav.setRoot(option.component || DetailsPage, { 'title': option.displayName });
+				this.navCtrl.setRoot(option.component || DetailsPage, { 'title': option.displayName });
 			}
 		});
 	}
