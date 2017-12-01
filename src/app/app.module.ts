@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { HttpModule, Http } from '@angular/http';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
@@ -50,7 +50,7 @@ export const firebaseConfig = {
   messagingSenderId: "" 
 }
 
-export function createTranslateLoader(http: Http) {
+export function createTranslateLoader(http: HttpClient ) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -64,7 +64,7 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     //AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
@@ -72,8 +72,8 @@ export function createTranslateLoader(http: Http) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [Http]
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
       }
     })
   ],
