@@ -182,7 +182,7 @@ side-menu-content {
   // for the selected option in the settings object:
   // selectedOptionClass: 'active-side-menu-option'
   
-  $active-color: map-get($colors, primary);
+  $active-color: map-get($colors, danger);
   $font-color: #222;
   $background-light-color: #d5ffd5;
   $background-dark-color: #eee;
