@@ -2,13 +2,13 @@
 import { Component } from '@angular/core';
 
 // Ionic
-import { NavController, Events } from "ionic-angular";
+//#Not Used#//import { NavController, Events } from "ionic-angular";
 
 // Pages
-import { DetailsPage } from "../details/details";
+//#Not Used#//import { DetailsPage } from "../details/details";
 
 // Side Menu Component
-import { SideMenuRedirectEvent, SideMenuRedirectEventData } from './../../shared/side-menu-content/models/side-menu-redirect-events';
+//#Not Used#//import { SideMenuRedirectEvent, SideMenuRedirectEventData } from './../../shared/side-menu-content/models/side-menu-redirect-events';
 
 @Component({
   selector: 'page-home',
