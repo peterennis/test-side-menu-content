@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { HttpModule, Http } from '@angular/http';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
@@ -26,17 +26,17 @@ import { SideMenuContentComponent } from '../shared/side-menu-content/side-menu-
 //Ref: https://github.com/angular/angularfire2/blob/master/docs/version-4-upgrade.md
 //Ref: https://stackoverflow.com/questions/43990887/getting-an-error-has-no-exported-member-angularfire-authproviders-authmethod
 import {AngularFireModule} from 'angularfire2';
-import {AngularFireAuthModule} from 'angularfire2/auth'; // for auth   
+//#Not Used#//import {AngularFireAuthModule} from 'angularfire2/auth'; // for auth   
 import {AngularFireDatabaseModule} from 'angularfire2/database'; // for database
 
-import { AngularFireAuth } from 'angularfire2/auth'; // for auth
-import { AngularFireDatabase } from 'angular2/database'; // for database
-////import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database'; // for Observables
+//#Not Used#//import { AngularFireAuth } from 'angularfire2/auth'; // for auth
+//#Not Used#//import { AngularFireDatabase } from 'angular2/database'; // for database
+//#Not Used#//import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database'; // for Observables
 
-import { environment } from '../environments/environment';
+//#Not Used#//import { environment } from '../environments/environment';
 
 // Do not import from 'firebase' as you'd lose the tree shaking benefits
-import * as firebase from 'firebase/app';
+//#Not Used#//import * as firebase from 'firebase/app';
 
 //import { FirebaseProvider } from './../providers/firebase/firebase';
 
@@ -50,7 +50,7 @@ export const firebaseConfig = {
   messagingSenderId: "" 
 }
 
-export function createTranslateLoader(http: Http) {
+export function createTranslateLoader(http: HttpClient ) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -64,7 +64,7 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     //AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
@@ -72,8 +72,8 @@ export function createTranslateLoader(http: Http) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [Http]
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
       }
     })
   ],
