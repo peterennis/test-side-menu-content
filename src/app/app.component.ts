@@ -5,8 +5,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform, MenuController, AlertController } from 'ionic-angular';
 
 // Ionic Native
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+//import { StatusBar } from '@ionic-native/status-bar';
+//import { SplashScreen } from '@ionic-native/splash-screen';
 
 // Pages
 import { HomePage } from '../pages/home/home';
@@ -54,8 +54,8 @@ export class MyApp {
   };
 
   constructor(private platform: Platform,
-        	  private statusBar: StatusBar,
-			  private splashScreen: SplashScreen,
+//        	  private statusBar: StatusBar,
+//			  private splashScreen: SplashScreen,
 			  private alertCtrl: AlertController,
 			  private menuCtrl: MenuController,
 			  public translate: TranslateService,
@@ -68,8 +68,8 @@ export class MyApp {
       this.global.set('theme', '');
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+//      this.statusBar.styleDefault();
+//      this.splashScreen.hide();
       // this language will be used as a fallback when a translation isn't found in the current language
       this.translate.setDefaultLang('en');
       // Set Platform Language

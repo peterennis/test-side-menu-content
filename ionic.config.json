@@ -1,6 +1,7 @@
 {
-  "name": "aedh",
+  "name": "test-side-menu",
   "type": "ionic-angular",
-  "app_id": "1681bf71",
-  "integrations": {}
+  "integrations": {},
+  "hooks": {},
+  "pro_id": "1681bf71"
 }

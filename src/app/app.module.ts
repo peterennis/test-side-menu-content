@@ -9,8 +9,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageService } from './../providers/language-service/language-service';
 
 //import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+//import { SplashScreen } from '@ionic-native/splash-screen';
+//import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 
@@ -25,9 +25,9 @@ import { SideMenuContentComponent } from '../shared/side-menu-content/side-menu-
 
 //Ref: https://github.com/angular/angularfire2/blob/master/docs/version-4-upgrade.md
 //Ref: https://stackoverflow.com/questions/43990887/getting-an-error-has-no-exported-member-angularfire-authproviders-authmethod
-import {AngularFireModule} from 'angularfire2';
+//import {AngularFireModule} from 'angularfire2';
 //#Not Used#//import {AngularFireAuthModule} from 'angularfire2/auth'; // for auth   
-import {AngularFireDatabaseModule} from 'angularfire2/database'; // for database
+//import {AngularFireDatabaseModule} from 'angularfire2/database'; // for database
 
 //#Not Used#//import { AngularFireAuth } from 'angularfire2/auth'; // for auth
 //#Not Used#//import { AngularFireDatabase } from 'angular2/database'; // for database
@@ -66,8 +66,8 @@ export function createTranslateLoader(http: HttpClient ) {
     BrowserModule,
     HttpClientModule,
     //AngularFireAuthModule,
-    AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    //AngularFireDatabaseModule,
+    //AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp),
     TranslateModule.forRoot({
       loader: {
@@ -88,8 +88,8 @@ export function createTranslateLoader(http: HttpClient ) {
     AppState,
 ////    FirebaseProvider,    
     LanguageService,
-    SplashScreen,
-    StatusBar,
+//    SplashScreen,
+//    StatusBar,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
