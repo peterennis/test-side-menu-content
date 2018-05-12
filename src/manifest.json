@@ -1,6 +1,6 @@
 {
-  "name": "A Divine History",
-  "short_name": "Divinity",
+  "name": "test-side-menu",
+  "short_name": "Sassy",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [
